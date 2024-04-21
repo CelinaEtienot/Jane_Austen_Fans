@@ -18,15 +18,20 @@ footer {
     margin-bottom: 50px;
     
 }
+#lotipo{
+    margin-bottom: 10px;
+}
 #logo{
-    width: 2.5%;
+    width: 3%;
     font-size: 1.5em;
+    vertical-align: bottom;
     
 }
 #titulo{
     width: 2.5%;
-    font-size: 1.5em;
+    font-size: 2em;
     vertical-align: middle;
+    
 }
 a {
     text-decoration: none;
@@ -188,7 +193,9 @@ section {
 footer {
     margin-top: 30px;
 }
-
+nav{
+    margin-top: 20px;
+}
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -197,6 +204,7 @@ nav ul {
 .navbar {
     overflow: hidden;
     background-color: #f6e6e3;
+    
 }
 
 .navbar a {
