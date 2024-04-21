@@ -5,16 +5,12 @@ body {
     padding: 0;
 }
 
-header, footer {
+header {
     background-color: #f6e6e3;
     padding: 10px;
     text-align: center;
     width: 100%;
     position: fixed;
-}
-#logotipo{
-    display: flex;
-    justify-content: center;
 }
 #logo{
     width: 2.5%;
@@ -117,10 +113,6 @@ th {
     background-color: #f6e6e3;
 }
 
-footer {
-    margin-top: 30px;
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -166,4 +158,8 @@ nav ul {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+#equipo{
+    color: #5a3b3d;
 }
