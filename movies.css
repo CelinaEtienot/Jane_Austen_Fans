@@ -23,13 +23,10 @@ footer {
     font-size: 1.5em;
     
 }
-#logo1{
+#titulo{
     width: 2.5%;
     font-size: 1.5em;
-    align-items: flex-end;
-   
-   
-    
+    vertical-align: middle;
 }
 a {
     text-decoration: none;
