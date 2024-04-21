@@ -12,10 +12,22 @@ header, footer {
     width: 100%;
     position: fixed;
 }
+#logotipo{
+    display: flex;
+    justify-content: center;
+}
 #logo{
     width: 2.5%;
     font-size: 1.5em;
-    ;
+    
+}
+#logo1{
+    width: 2.5%;
+    font-size: 1.5em;
+    align-items: flex-end;
+   
+   
+    
 }
 a {
     text-decoration: none;
