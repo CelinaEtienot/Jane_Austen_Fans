@@ -9,6 +9,8 @@ header, footer {
     background-color: #f6e6e3;
     padding: 10px;
     text-align: center;
+    width: 100%;
+    position: fixed;
 }
 #logo{
     width: 2.5%;
@@ -41,6 +43,7 @@ h3 {
 }
 
 .fondo {
+    margin:80px;
     background-image: url('Img/fondo3.jpeg');
     background-size: cover; 
     background-position: center; 
@@ -55,7 +58,32 @@ h3 {
 section {
     margin-bottom: 30px;
 }
-
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.movie {
+    width: 200px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+.movie img {
+    max-width: 100%;
+    max-height: 70% ;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+.movie-info h3 {
+    margin: 0;
+    color: #5a3b3d;
+    font-size: 1.5em;
+    text-align: center
+}
 table {
     width: 100%;
     border-collapse: collapse;
