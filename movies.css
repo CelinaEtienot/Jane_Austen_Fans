@@ -5,17 +5,31 @@ body {
     padding: 0;
 }
 
-header, footer {
+header {
     background-color: #f6e6e3;
     padding: 10px;
     text-align: center;
     width: 100%;
     position: fixed;
 }
+footer {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    
+}
 #logo{
     width: 2.5%;
     font-size: 1.5em;
-    ;
+    
+}
+#logo1{
+    width: 2.5%;
+    font-size: 1.5em;
+    align-items: flex-end;
+   
+   
+    
 }
 a {
     text-decoration: none;
@@ -246,10 +260,6 @@ th {
     background-color: #f6e6e3;
 }
 
-footer {
-    margin-top: 30px;
-}
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -295,4 +305,8 @@ nav ul {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+}
+
+#equipo{
+    color: #5a3b3d;
 }
