@@ -11,6 +11,7 @@ header {
     text-align: center;
     width: 100%;
     position: fixed;
+    z-index: 1;
 }
 footer {
     text-align: center;
@@ -111,24 +112,13 @@ section {
     margin-bottom: 10px;
 }
 .movie-info h3 {
-    margin: 0;
+    margin-top: 30%;
     color: #5a3b3d;
     font-size: 1.5em;
-    text-align: center
+    text-align: center;
+    vertical-align: middle;
 }
-.movie {
-    width: 200px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-.movie-info h3 {
-    margin: 10px;
-    color: #5a3b3d;
-    font-size: 1.5em;
-    text-align: center
-}
+
 body {
     font-family: "IM Fell English SC", serif;
     background-color: #f9f4f3;
@@ -136,13 +126,7 @@ body {
     padding: 0;
 }
 
-header, footer {
-    background-color: #f6e6e3;
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    position: fixed;
-}
+
 #logo{
     width: 2.5%;
     font-size: 1.5em;
