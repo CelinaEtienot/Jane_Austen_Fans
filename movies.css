@@ -12,7 +12,19 @@ header {
     width: 100%;
     position: fixed;
     z-index: 1;
+    
 }
+/*.container-carrusel{
+    width: 20%;
+    height: auto;   
+    display: flex;
+    justify-content: center;
+}
+.container-carrusel #carrusel{
+    align-items: center;
+    
+}
+*/
 footer {
     text-align: center;
     margin-top: 30px;
@@ -161,10 +173,6 @@ section {
     margin-bottom: 30px;
 }
 
-
-footer {
-    margin-top: 30px;
-}
 nav{
     margin-top: 20px;
 }
