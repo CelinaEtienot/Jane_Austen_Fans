@@ -14,17 +14,14 @@ header {
     z-index: 1;
     
 }
-/*.container-carrusel{
+.container-carrusel{
     width: 20%;
-    height: auto;   
-    display: flex;
-    justify-content: center;
-}
-.container-carrusel #carrusel{
-    align-items: center;
+    height: auto;  
+    margin-right: 50%;
     
 }
-*/
+
+
 footer {
     text-align: center;
     margin-top: 30px;
