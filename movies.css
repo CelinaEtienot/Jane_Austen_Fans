@@ -60,13 +60,13 @@ h3 {
 }
 
 .fondo {
-    margin:80px;
+    margin-top:90px;
     background-image: url('Img/fondo3.jpeg');
     background-size: cover; 
     background-position: center; 
     color: white; 
     text-align: center; 
-    padding: 50px; 
+    padding: 10px; 
 }
 .fondo a {
     color: white;
@@ -155,19 +155,6 @@ h2{
 h3 {
     color: #ffffff;
     font-size: 2em;
-}
-
-.fondo {
-    margin:80px;
-    background-image: url('Img/fondo3.jpeg');
-    background-size: cover; 
-    background-position: center; 
-    color: white; 
-    text-align: center; 
-    padding: 50px; 
-}
-.fondo a {
-    color: white;
 }
 
 section {
