@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&            display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <title>Movies</title>
 </head>
@@ -38,14 +39,14 @@
             <h3>Cancelá en cualquier momento</h3>
             <a href="registrarse.html" class="botonBuscador">Registrate</a>
         </section>
-        <section>
+        <section data-aos="zoom-in-right" data-aos-duration="1000">
             <h2>¿Qué estas buscando para ver?</h2>
             <form action="submit">
                 <input class="inputBuscador" type="text" placeholder="Buscar...">
                 <input class="botonBuscador" type="submit" value="Buscar">
             </form>
         </section>
-        <section>
+        <section data-aos="zoom-in-right" data-aos-duration="1000">
             <h2>Películas</h2>
 
             <div class="movie-list">
@@ -145,7 +146,7 @@
 
 
 
-        <Section>
+        <section data-aos="zoom-in-right" data-aos-duration="1000">
             <h2>Series</h2>
             <div class="fondo-series">
                 <div class="container-carrusel">
@@ -187,12 +188,12 @@
                                 <img src="./Img/serieEmma.jpg" class="d-block w-100" alt="Emma">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade2"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade2"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -213,12 +214,12 @@
                                 <img src="./Img/Poldrakjpg.jpg" class="d-block w-100" alt="Poldark">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade1"
                             data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade1"
                             data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
@@ -227,7 +228,7 @@
                     
                 </div>
                </div>
-        </Section>
+        </section>
     </main>
     <footer>
         <Nav>
@@ -243,6 +244,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
 </body>
 
 </html>
