@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    background-image: url('Img/fondo6.jpg');
+    background-size: cover ;
+  }
+  
+  .contenido {
+    background-color: #a58183;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #fff; /* Color blanco */
+  }
+  
+  .formulario {
+    margin: 40px;
+  }
+  
+  input[type="email"],
+  input[type="password"],
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  input[type="email"],
+  input[type="password"] {
+    background-color: #f0f0f0; /* Color gris claro */
+  }
+  
+  button {
+    background-color: #5a3b3d; /* Color verde */
+    color: #fff;
+    cursor: pointer;
+    width: 50%
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
