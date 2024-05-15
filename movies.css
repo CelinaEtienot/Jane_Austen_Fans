@@ -55,7 +55,7 @@ main {
 }
 
 .fondo {
-    margin:80px;
+    margin-top:80px;
     background-image: url('Img/fondo3.jpeg');
     background-size: cover; 
     background-position: center; 
