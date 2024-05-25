@@ -5,9 +5,8 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('Img/fondo6.jpg');
+    background-image: url('Img/fondo4.jpg');
     background-size: cover ;
-    background-color: transparent;
   }
   
   #contenido {
