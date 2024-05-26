@@ -65,4 +65,8 @@ body, html {
     text-decoration: none;
     margin-bottom: 4%;
   }
+  .cards_api img{
+    width: 20px;
+    height: 20px;
+  }
   
