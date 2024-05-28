@@ -25,4 +25,3 @@ fetch(url, options)
         });
     })
     .catch(error => console.error('Error:', error));
-
