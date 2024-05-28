@@ -15,6 +15,7 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    font-family:"IM Fell English SC", serif;
   }
   .animate__animated.animate__fadeIn{
     --animate-duration: 5s;
