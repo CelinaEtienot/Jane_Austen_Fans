@@ -1,10 +1,15 @@
-
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "IM Fell English SC", serif;
+  }
   
   #contenedor {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     background-image: url('Img/fondo6.jpg');
     background-size: cover ;
   }
@@ -20,7 +25,7 @@
     --animate-duration: 5s;
     --animate-delay: 0.9s;
   }
-  #contenedor h1 {
+  h1 {
     color: #6b6969f6;
     margin: 20px;
   }
@@ -33,7 +38,7 @@
   
   input[type="email"],
   input[type="password"],
-   button {
+  button {
     width: 80%;
     padding: 10px;
     margin-bottom: 10px;
@@ -47,7 +52,7 @@
     background-color: #f0f0f0;
   }
   
-  .formulario button {
+  button {
     background-color: #5a3b3d;
     color: #fff;
     cursor: pointer;
@@ -55,15 +60,13 @@
     margin-top: 30px;
   }
   
-  .formulario a {
+  a {
     color: #6b6969f6;
     text-decoration: none;
     margin-bottom: 4%;
   }
-  .customClass {
-    background-color: #007bff !important;
-    color: white !important;
-    padding: 10px 20px !important;
-    font-size: 1.2rem !important;
-    border-radius: 5px !important;
+  .cards_api img{
+    width: 20px;
+    height: 20px;
   }
+  
