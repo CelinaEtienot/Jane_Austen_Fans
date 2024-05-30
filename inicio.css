@@ -1,73 +1,63 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: "IM Fell English SC", serif;
-  }
+
   
-  #contenedor {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background-image: url('Img/fondo6.jpg');
-    background-size: cover ;
-  }
-  
-  #contenido {
-    background-color: rgba(255, 255, 255, 0.7);
-    width: 35%;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-family:"IM Fell English SC", serif;
-  }
-  .animate__animated.animate__fadeIn{
-    --animate-duration: 5s;
-    --animate-delay: 0.9s;
-  }
-  h1 {
-    color: #6b6969f6;
-    margin: 20px;
-  }
-  
-  .formulario {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  input[type="email"],
-  input[type="password"],
-  button {
-    width: 80%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: none;
-    margin: 10px;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    background-color: #f0f0f0;
-  }
-  
-  button {
-    background-color: #5a3b3d;
-    color: #fff;
-    cursor: pointer;
-    width: 40%;
-    margin-top: 30px;
-  }
-  
-  a {
-    color: #6b6969f6;
-    text-decoration: none;
-    margin-bottom: 4%;
-  }
-  .cards_api img{
-    width: 20px;
-    height: 20px;
-  }
-  
+#contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('Img/fondo6.jpg');
+  background-size: cover ;
+  background-color: transparent;
+}
+
+#contenido {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 35%;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.animate__animated.animate__fadeIn{
+  --animate-duration: 5s;
+  --animate-delay: 0.9s;
+}
+#contenedor h1 {
+  color: #6b6969f6;
+  margin: 20px;
+}
+
+.formulario {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+input[type="email"],
+input[type="password"],
+ button {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: none;
+  margin: 10px;
+}
+
+input[type="email"],
+input[type="password"] {
+  background-color: #f0f0f0;
+}
+
+.formulario button {
+  background-color: #5a3b3d;
+  color: #fff;
+  cursor: pointer;
+  width: 40%;
+  margin-top: 30px;
+}
+
+.formulario a {
+  color: #6b6969f6;
+  text-decoration: none;
+  margin-bottom: 4%;
+}
