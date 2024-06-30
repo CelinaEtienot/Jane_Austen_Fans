@@ -9,12 +9,11 @@ $dbname = "id22390418_web_peliculas";
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar conexión
-if ($conn->connect_error) 
-    {
-        die("Conexión fallida: " . $conn->connect_error);
-    }
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
 
-    // Obtener los datos del formulario
+// Obtener los datos del formulario
 $nombre = $_POST['nombre'];
 $apellido = $_POST['apellido'];
 $correo = $_POST['correo'];
@@ -25,13 +24,14 @@ $nacionalidad = $_POST['nacionalidad'];
 // Insertar datos en la tabla de usuarios
 $sql = "INSERT INTO usuarios (nombre, apellido, correo, password, nacimiento, nacionalidad) VALUES ('$nombre', '$apellido','$correo', '$password','$nacimiento','$nacionalidad')";
 
-if ($conn->query($sql) === TRUE) 
-    {
-        echo "Registro exitoso";
-    } 
-else 
-    {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
-    // Cerrar conexión
+if ($conn->query($sql) === TRUE) {
+    // Redirigir a la página de inicio
+    header("index.html");
+    exit(); // Asegurarse de que no se ejecute más código después de la redirección
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// Cerrar conexión
 $conn->close();
+?>
