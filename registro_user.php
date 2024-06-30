@@ -1,9 +1,9 @@
 <?php
 // Conexión a la base de datos
 $servername = "localhost"; 
-$username = "id22390418_cacproyectjaneaustenfans"; 
-$password = ""; 
-$dbname = "id22390418_jeremias";
+$username = "id22390418_janeaustenfans"; 
+$password = "Manz@nito01"; 
+$dbname = "id22390418_web_peliculas";
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
