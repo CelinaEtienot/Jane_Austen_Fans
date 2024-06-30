@@ -1,12 +1,12 @@
-document.getElementById('Registro_usuario').addEventListener('submit', function(event) {
+document.getElementById('Registo_usuario').addEventListener('submit', function(event) {
     event.preventDefault();
 
     const nombre = document.getElementById('nombre').value;
     const apellido = document.getElementById('apellido').value;
     const correo = document.getElementById('correo').value;
     const password = document.getElementById('password').value;
-    const nacimiento = document.getElementById('fecha_nacimiento').value;
-    const pais = document.getElementById('nacionalidad').value;
+    const nacimiento = document.getElementById('nacimiento').value;
+    const pais = document.getElementById('pais').value;
 
     if (nombre === "" || apellido === "" || correo === "" || password === "" || nacimiento === "" || pais === "") {
         Swal.fire({
@@ -22,8 +22,7 @@ document.getElementById('Registro_usuario').addEventListener('submit', function(
             icon: 'success',
             confirmButtonText: 'OK'
         }).then(() => {
-            document.getElementById('Registro_usuario').submit();
+            document.getElementById('Registo_usuario').submit();
         });
     }
 });
-
