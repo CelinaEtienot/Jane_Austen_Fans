@@ -14,30 +14,32 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <style>
-      .form-group {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            flex: 1;
-            margin-right: 10px;
-            text-align: right;
-        }
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            flex: 2;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .form-group textarea {
-            resize: vertical;
-            height: 100px;
-        }
-       
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      flex: 1;
+      margin-right: 10px;
+      text-align: right;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      flex: 2;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 100px;
+    }
   </style>
 </head>
 
@@ -46,58 +48,60 @@
     <div class="animate__animated animate__fadeIn" id="contenido">
       <h1>Registro de películas</h1>
       <div class="formulario" id="formulario">
-        <form action="registro.php" method="post" id="loginForm">
-            <div class="form-group">
-                <label for="nombre">Nombre de la Película:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
-            <div class="form-group">
-                <label for="año">Año:</label>
-                <input type="number" id="año" name="año" min="1888" required>
-            </div>
-            <div class="form-group">
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" name="descripcion" required></textarea>
-            </div>
-            <div class="form-group">
-                <label for="genero">Género:</label>
-                <select id="genero" name="genero" required>
-                    <option value="">Seleccione un género</option>
-                    <option value="accion">Acción</option>
-                    <option value="aventura">Aventura</option>
-                    <option value="comedia">Comedia</option>
-                    <option value="drama">Drama</option>
-                    <option value="fantasia">Fantasía</option>
-                    <option value="horror">Horror</option>
-                    <option value="misterio">Misterio</option>
-                    <option value="romance">Romance</option>
-                    <option value="ciencia_ficcion">Ciencia Ficción</option>
-                    <option value="thriller">Thriller</option>
-                    <option value="western">Western</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="director">Director:</label>
-                <input type="text" id="director" name="director" required>
-            </div>
-            <div class="form-group">
-                <label for="valoracion">Valoración:</label>
-                <input type="number" id="valoracion" name="valoracion" min="0" max="10" step="0.1" required>
-            </div>
-            <div >
-                <button type="submit">Registrar</button>
-            </div>
-          </form>
+        <form action="php/registro.php" method="post" id="loginForm">
+          <div class="form-group">
+            <label for="nombre">Nombre de la Película:</label>
+            <input type="text" id="nombre" name="nombre" required>
+          </div>
+          <div class="form-group">
+            <label for="año">Año:</label>
+            <input type="number" id="año" name="año" min="1888" required>
+          </div>
+          <div class="form-group">
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" name="descripcion" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero" required>
+              <option value="">Seleccione un género</option>
+              <option value="accion">Acción</option>
+              <option value="aventura">Aventura</option>
+              <option value="comedia">Comedia</option>
+              <option value="drama">Drama</option>
+              <option value="fantasia">Fantasía</option>
+              <option value="horror">Horror</option>
+              <option value="misterio">Misterio</option>
+              <option value="romance">Romance</option>
+              <option value="ciencia_ficcion">Ciencia Ficción</option>
+              <option value="thriller">Thriller</option>
+              <option value="western">Western</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="director">Director:</label>
+            <input type="text" id="director" name="director" required>
+          </div>
+          <div class="form-group">
+            <label for="valoracion">Valoración:</label>
+            <input type="number" id="valoracion" name="valoracion" min="0" max="10" step="0.1" required>
+          </div>
+          <div>
+            <button type="submit">Registrar</button>
+          </div>
+        </form>
       </div>
       <a href="index.html">Volver a inicio</a>
+      <a href="series.php">Ver registros</a>
     </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
-  <script src="js/script.js"></script>
+  
 </body>
 
 </html>
