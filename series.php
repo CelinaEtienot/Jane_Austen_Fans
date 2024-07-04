@@ -27,11 +27,42 @@
         th {
             background-color: #f2f2f2;
         }
-        .actions {
-            display: flex;
-            gap: 10px;
+          .action-icons .btn {
+            width: 100%; 
+            border: none;
+            background: none;
+            padding: 0;
         }
+        .action-icons .btn i {
+            font-size: 1.5rem;
+            color: #000; 
+        }
+
+        .delete-btn {
+            background-color: #ff4d4d;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            text-align: center;
+        }
+        .edit-btn {
+            background-color: #4d94ff;
+            color: white;
+            width: 100%;
+            padding: 10px;
+            border: none;
+            text-align: center;
+        }
+        .delete-btn:hover {
+            background-color: #ff3333;
+        }
+        .edit-btn:hover {
+            background-color: #3385ff;
+        }
+
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Movies</title>
 </head>
 
@@ -44,11 +75,10 @@
             </div>
         </div>
         <Nav>
-            <a href="tendencias.html" target="_blank">Tendencias</a>
-            <a href="registrarse.html" target="_blank">Registrarse</a>
-            <a href="iniciar_sesion.html" target="_blank">Iniciar Sesión</a>
-            <a href="conexion_api.html" target="_blank">Conexion Api</a>
-            <a href="registro_pelis.html" target="_blank">Registro de Películas</a>
+        <a href="conexion_api.html">Tendencias</a>
+            <a href="registrarse.html">Registrarse</a>
+            <a href="iniciar_sesion.html">Iniciar Sesión</a>
+            <a href="registro_series.html">Registro de series</a>
         </Nav>
     </Header>
     <main>
@@ -58,12 +88,14 @@
             <table>
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Año</th>
                         <th>Descripción</th>
                         <th>Género</th>
-                        <th>Director</th>
-                        <th>Valoración</th>
+                        <th>Temporadas</th>
+                        <th>Capitulos</th>
+                        <th>Trailer</th>
                         <th>Acciones</th>
                     </tr>
                 </thead>
@@ -84,6 +116,40 @@
             <h4>©2024 todos los derechos reservados</h4>
         </div>
     </footer>
+    <script>
+        function deleteFilm(id) {
+            Swal.fire({
+                title: "¿Estás seguro que deseas eliminar?",
+                text: "Si aceptas se eliminará de forma definitiva",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Sí, borrar",
+                cancelButtonText: "Cancelar"
+            }).then((result) => { 
+                if (result.isConfirmed) {
+                    // Crear un formulario dinámicamente
+                    var form = document.createElement('form');
+                    form.method = 'POST';
+                    form.action = 'php/delet.php';
+
+                    // Crear un campo oculto para el ID
+                    var input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'ID';
+                    input.value = id;
+
+                    // Añadir el campo al formulario
+                    form.appendChild(input);
+
+                    // Añadir el formulario al body y enviarlo
+                    document.body.appendChild(form);
+                    form.submit();
+                }
+            });
+}
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>

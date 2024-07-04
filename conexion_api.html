@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        #peliculas {
+            margin-top: 50px;
+            text-align: center;
+        }
+    </style>
     <title>Películas Populares</title>
 </head>
 
@@ -22,19 +28,19 @@
         <div class="container">
             <div class="animate__animated animate__fadeInDown" id="Logotipo">
                 <img src="Img/logo.png" alt="Jane Austen" id="logo">
-                <a href="movies.html" id="titulo">Ranking según IMDB</a>
+                <a href="index.html" id="titulo">Ranking según IMDB</a>
             </div>
         </div>
         <Nav>
-            <a href="tendencias.html" target="_blank">Tendencias</a>
-            <a href="registrarse.html" target="_blank">Registrarse</a>
-            <a href="iniciar_sesion.html" target="_blank">Iniciar Sesión</a>
-            <a href="conexion_api.html" target="_blank">Conexion Api</a>
+            <a href="conexion_api.html">Tendencias</a>
+            <a href="registrarse.html">Registrarse</a>
+            <a href="iniciar_sesion.html">Iniciar Sesión</a>
+            <a href="registro_series.html">Registro de series</a>
         </Nav>
     </Header>
     <main>
-        <section data-aos="zoom-in-right" data-aos-duration="1000">
-            <h2>Películas Populares</h2>
+        <section id="peliculas" data-aos="zoom-in-right" data-aos-duration="1000">
+            <h2>Películas románticas en el ranking de IMDB</h2>
             <ul id="movies-list" class="movie-list"></ul>
         </section>
     </main>
@@ -53,7 +59,7 @@
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="api.js"></script>
+    <script src="js/api.js"></script>
     <script>
         AOS.init();
     </script>

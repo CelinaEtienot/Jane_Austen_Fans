@@ -1,43 +1,59 @@
 <?php
-// Mostrar errores para depuración
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-// Datos de conexión a la base de datos
+// Configuración de la base de datos
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "janeaustenfans";
 
-// Crear la conexión
+// Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar la conexión
+// Verificar conexión
 if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    die(json_encode(['success' => false, 'error' => 'Falla de conexion: ' . $conn->connect_error]));
 }
 
-// Verificar que la solicitud es de tipo POST
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $id = $_POST['id'];
+// Verificar si se recibió el ID
+if (!isset($_POST['ID']) || empty($_POST['ID'])) {
+    die(json_encode(['success' => false, 'error' => 'ID no proporcionado']));
+}
 
-    // Preparar la consulta SQL
-    $sql = "DELETE FROM films WHERE id=$id";
+// Obtener el ID de la película a eliminar
+$id = $_POST['ID'];
 
-    // Ejecutar la consulta y verificar si fue exitosa
-    if ($conn->query($sql) === TRUE) {
-        echo "<script>
-                alert('Registro eliminado con éxito');
-                window.location.href = 'index.html';
-              </script>";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+// Preparar la consulta SQL
+$sql = "DELETE FROM films WHERE ID = ?";
 
-    // Cerrar la conexión
-    $conn->close();
+// Preparar y ejecutar la declaración
+$stmt = $conn->prepare($sql);
+if ($stmt === false) {
+    die(json_encode(['success' => false, 'error' => 'Error en la preparación de la consulta: ' . $conn->error]));
+}
+
+$stmt->bind_param("i", $id);
+$result = $stmt->execute();
+
+// Enviar respuesta
+if ($result) {
+    echo "<html><head><script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script></head><body>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          Swal.fire({
+              title: 'Éxito',
+              text: 'Registro eliminado con éxito',
+              icon: 'success',
+              confirmButtonText: 'OK'
+          }).then((result) => {
+              if (result.isConfirmed) {
+                  window.location.href = '../series.php'
+              }
+          });
+      });
+    </script></body></html>";
 } else {
-    echo "Método de solicitud no permitido.";
+    echo json_encode(['success' => false, 'error' => 'Error al eliminar: ' . $stmt->error]);
 }
+
+$stmt->close();
+$conn->close();
 ?>

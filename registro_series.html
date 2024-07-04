@@ -19,12 +19,12 @@
       justify-content: space-between;
       align-items: center;
       margin-bottom: 15px;
-    }
+         }
 
     .form-group label {
       flex: 1;
       margin-right: 10px;
-      text-align: right;
+      text-align: center;
     }
 
     .form-group input,
@@ -38,7 +38,27 @@
 
     .form-group textarea {
       resize: vertical;
-      height: 100px;
+      height: 50px; 
+    }
+
+    .form-group.flex {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    .form-group.flex label {
+      margin-right: 10px;
+    }
+
+    .form-group.flex .form-control {
+      flex: 1;
+      margin-right: 10px;
+    }
+    .formulario{
+      justify-content: center;
+      padding-left: 10px;
+      padding-right: 10px;
     }
   </style>
 </head>
@@ -46,11 +66,11 @@
 <body>
   <div id="contenedor">
     <div class="animate__animated animate__fadeIn" id="contenido">
-      <h1>Registro de películas</h1>
+      <h1>Registro de series</h1>
       <div class="formulario" id="formulario">
         <form action="php/registro.php" method="post" id="loginForm">
           <div class="form-group">
-            <label for="nombre">Nombre de la Película:</label>
+            <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
           </div>
           <div class="form-group">
@@ -60,6 +80,12 @@
           <div class="form-group">
             <label for="descripcion">Descripción:</label>
             <textarea id="descripcion" name="descripcion" required></textarea>
+          </div>
+          <div class="form-group flex">
+            <label for="Temporadas">Temporadas:</label>
+            <input type="number" id="Temporadas" name="Temporadas" min="0" max="50" step="1" required class="form-control">
+            <label for="capitulos">Capítulos:</label>
+            <input type="number" id="capitulos" name="capitulos" min="0" max="100" step="1" required class="form-control">
           </div>
           <div class="form-group">
             <label for="genero">Género:</label>
@@ -79,12 +105,8 @@
             </select>
           </div>
           <div class="form-group">
-            <label for="director">Director:</label>
-            <input type="text" id="director" name="director" required>
-          </div>
-          <div class="form-group">
-            <label for="valoracion">Valoración:</label>
-            <input type="number" id="valoracion" name="valoracion" min="0" max="10" step="0.1" required>
+            <label for="Trailer">Trailer:</label>
+            <input type="url" id="Trailer" name="Trailer" required>
           </div>
           <div>
             <button type="submit">Registrar</button>
