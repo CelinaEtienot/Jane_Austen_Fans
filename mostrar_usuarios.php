@@ -116,7 +116,8 @@ $result = $conn->query($sql);
 
 </html>
 
+
 <?php
-// Cerrar conexión
+// Cerrar conexión !!
 $conn->close();
 ?>
