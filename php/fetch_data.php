@@ -40,7 +40,7 @@ if ($result->num_rows > 0) {
         echo "</td>";
         echo "<td>";
         echo "<button class='delete-btn'onclick='deleteFilm({$row['ID']})'>Eliminar</button>";
-        echo "<button class='edit-btn'>Editar</button>";
+        echo "<button class='edit-btn'onclick='updateFilm({$row['ID']})'>Editar</button>";
         echo "</td>";
         echo "</tr>";
     }
