@@ -13,6 +13,9 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
+// Consulta SQL para obtener datos de la tabla usuarios
+$sql = "SELECT id, nombre, apellido, correo, nacimiento, nacionalidad FROM usuarios";
+$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
@@ -51,47 +54,45 @@ if ($conn->connect_error) {
         </Nav>
     </Header>
     <main>
-    <section class="fondo">
+        <section class="fondo">
             <h1>Lista de Usuarios registrados</h1>
-            
             <a href="registro_usuario.html" class="botonBuscador">Registrate</a>
         </section>
-
-
-
-
-<div>
-    <table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    </tbody>
-    </table>
-</div>  
-
+        <div>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Fecha de Nacimiento</th>
+                        <th scope="col">Nacionalidad</th>
+                        <th scope="col">Eliminar registro</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if ($result->num_rows > 0) {
+                        // Output data of each row
+                        while($row = $result->fetch_assoc()) {
+                            echo "<tr>";
+                            echo "<th scope='row'>" . $row["id"] . "</th>";
+                            echo "<td>" . $row["nombre"] . "</td>";
+                            echo "<td>" . $row["apellido"] . "</td>";
+                            echo "<td>" . $row["correo"] . "</td>";
+                            echo "<td>" . $row["nacimiento"] . "</td>";
+                            echo "<td>" . $row["nacionalidad"] . "</td>";
+                            echo "<td><a href='eliminar_registro.php?id=" . $row["id"] . "' class='btn btn-danger'>Eliminar</a></td>";
+                            echo "</tr>";
+                        }
+                    } else {
+                        echo "<tr><td colspan='7'>No hay usuarios registrados.</td></tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+        </div>
     </main>
     <footer>
         <Nav>
@@ -114,8 +115,6 @@ if ($conn->connect_error) {
 </body>
 
 </html>
-
-
 
 <?php
 // Cerrar conexión
