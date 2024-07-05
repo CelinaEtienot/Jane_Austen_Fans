@@ -1,0 +1,141 @@
+body, html {
+    font-family: "IM Fell English SC", serif;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header {
+    background-color: #f6e6e3;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+  }
+  footer {
+    text-align: center;
+    margin-bottom: 50px;
+    
+  }
+  #logo{
+    width: 2.5%;
+    font-size: 1.5em;
+    
+  }
+  #logo1{
+    width: 2.5%;
+    font-size: 1.5em;
+    align-items: flex-end;
+     
+  }
+  a {
+    text-decoration: none;
+    color: #5a3b3d;
+    margin: 0.5em;
+  }
+  #contenedor {
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('Img/fondo6.jpg');
+    background-size: cover;
+  }
+  
+  #contenido {
+    background-color: rgba(255, 255, 255, 0.7);
+    width: 35%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .animate__animated.animate__fadeIn {
+    --animate-duration: 1s;
+    --animate-delay: 0.9s;
+  }
+  
+  #contenido h1 {
+    color: #6b6969f6;
+    margin: 20px;
+  }
+  
+  .formulario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .formulario input[id="nombre"],
+  input[id="apellido"],
+  input[id="correo"],
+  input[id="password"],
+  input[id="nacimiento"],
+  select[id="pais"],
+    button {
+    width: 70%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    margin: 10px;
+  }
+  
+  input[id="nombre"],
+  input[id="apellido"],
+  input[id="correo"],
+  input[id="password"],
+  input[id="nacimiento"],
+  select[id="pais"] {
+    background-color: #f0f0f0;
+  }
+  
+  .formulario button {
+    background-color: #5a3b3d;
+    color: #fff;
+    cursor: pointer;
+    width: 40%;
+    margin-top: 30px;
+  }
+  
+  .formulario a {
+    color: #6b6969f6;
+    text-decoration: none;
+    margin-bottom: 4%;
+  }
+  
+
+  /* Estilos personalizados para SweetAlert */
+  .swal2-popup {
+    font-family: "IM Fell English SC", serif;
+    font-size: 1.2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    width: 40%;
+  }
+  
+  .swal2-title {
+    color: #6b6969f6;
+    font-size: 1.5rem;
+  }
+  
+  .swal2-content {
+    color: #6b6969f6;
+  }
+  
+  .swal2-styled.swal2-confirm {
+    background-color: #5a3b3d ;
+    color: #fff ;
+      border-radius: 5px ;
+    width: 100%;
+  }
+  
+  .swal2-actions{
+    width: 100px;
+  }
+  
+  .swal2-styled.swal2-cancel {
+    background-color: #d9534f;
+    color: #fff;
+    border-radius: 5px;
+  }
