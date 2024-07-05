@@ -5,10 +5,10 @@ ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
 // Datos de conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "janeaustenfans";
+$servername = "localhost"; 
+$username = "id22390418_janeaustenfans"; 
+$password = "Manz@nito01"; 
+$dbname = "id22390418_web_peliculas";
 
 // Crear la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
