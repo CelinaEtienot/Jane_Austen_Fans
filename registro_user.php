@@ -26,7 +26,7 @@ $sql = "INSERT INTO usuarios (nombre, apellido, correo, password, nacimiento, na
 
 if ($conn->query($sql) === TRUE) {
     // Redirigir a la página de inicio
-    header("Location: mostrar_usuario.php");
+    header("Location: mostrar_usuarios.php");
     exit(); // Asegurarse de que no se ejecute más código después de la redirección
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
